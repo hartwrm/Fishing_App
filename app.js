@@ -10,6 +10,7 @@ let apiKey = '&appid=7538ada83bef78836cd80e44d909aa83'
 let queryURL = baseURL + zipCode + apiKey + '&units=imperial'
 console.log(queryURL);
 
+
 const forecast = () => {
   for (let i = 1; i <= 5; i++) {
     const $days = $('<div>').attr('id', i).appendTo('.days')
@@ -26,6 +27,7 @@ const goFish = () => {
     $('#1').html(`
       <h2>${weather.city.name}</h2>
       <h3>${weather.list[1].dt_txt}</h3>
+      <img src='http://openweathermap.org/img/w/${weather.list[2].weather[0].icon}.png' alt="Weather Icon">
       <h4>Temp Range: ${weather.list[1].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
       <p>Humidity: ${weather.list[1].main.humidity}%</p>
       <p>${weather.list[1].weather[0].description}</p>
@@ -36,6 +38,7 @@ const goFish = () => {
       $('#2').html(`
         <h2>${weather.city.name}</h2>
         <h3>${weather.list[9].dt_txt}</h3>
+        <img src='http://openweathermap.org/img/w/${weather.list[9].weather[0].icon}.png' alt="Weather Icon">
         <h4>Temp Range: ${weather.list[9].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
         <p>Humidity: ${weather.list[9].main.humidity}%</p>
         <p>${weather.list[9].weather[0].description}</p>
@@ -46,6 +49,7 @@ const goFish = () => {
       $('#3').html(`
         <h2>${weather.city.name}</h2>
         <h3>${weather.list[17].dt_txt}</h3>
+        <img src='http://openweathermap.org/img/w/${weather.list[17].weather[0].icon}.png' alt="Weather Icon">
         <h4>Temp Range: ${weather.list[17].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
         <p>Humidity: ${weather.list[17].main.humidity}%</p>
         <p>${weather.list[17].weather[0].description}</p>
@@ -56,6 +60,7 @@ const goFish = () => {
       $('#4').html(`
         <h2>${weather.city.name}</h2>
         <h3>${weather.list[25].dt_txt}</h3>
+        <img src='http://openweathermap.org/img/w/${weather.list[25].weather[0].icon}.png' alt="Weather Icon">
         <h4>Temp Range: ${weather.list[25].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
         <p>Humidity: ${weather.list[25].main.humidity}%</p>
         <p>${weather.list[25].weather[0].description}</p>
@@ -66,6 +71,7 @@ const goFish = () => {
       $('#5').html(`
         <h2>${weather.city.name}</h2>
         <h3>${weather.list[33].dt_txt}</h3>
+        <img src='http://openweathermap.org/img/w/${weather.list[2].weather[0].icon}.png' alt="Weather Icon">
         <h4>Temp Range: ${weather.list[33].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
         <p>Humidity: ${weather.list[33].main.humidity}%</p>
         <p>${weather.list[33].weather[0].description}</p>
