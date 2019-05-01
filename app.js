@@ -2,7 +2,7 @@ console.log("ground control to major tom?");
 console.log($);
 
 //zipcode is going to be user input
-let zipCode = '18201'
+let zipCode = '02043'
 
 //URL variables for API
 let baseURL = 'https://api.openweathermap.org/data/2.5/forecast?zip='
@@ -17,60 +17,61 @@ const goFish = () => {
   $.ajax({
     url: queryURL
   }).then((weather) => {
+    console.log(weather);
     $('#1').html(`
       <img src='http://openweathermap.org/img/w/${weather.list[2].weather[0].icon}.png' alt="Weather Icon">
       <h2>${weather.city.name}</h2>
-      <h3>${weather.list[1].dt_txt}</h3>
-      <h4>Temp Range: ${weather.list[1].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-      <p>Status: ${weather.list[1].weather[0].description}</p>
-      <p>Humidity: ${weather.list[1].main.humidity}%</p>
-      <p>Cloudiness: ${weather.list[1].clouds.all}%</p>
-      <p>Wind Speed: ${weather.list[1].wind.speed}mph</p>
-      <p>Wind Direction: ${weather.list[1].wind.deg}</p>
+      <h3>${weather.list[2].dt_txt}</h3>
+      <h4>Temp Range: ${weather.list[2].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+      <p>Status: ${weather.list[2].weather[0].description}</p>
+      <p>Humidity: ${weather.list[2].main.humidity}%</p>
+      <p>Cloudiness: ${weather.list[2].clouds.all}%</p>
+      <p>Wind Speed: ${weather.list[2].wind.speed}mph</p>
+      <p>Wind Direction: ${weather.list[2].wind.deg}</p>
       `)
       $('#2').html(`
+        <img src='http://openweathermap.org/img/w/${weather.list[10].weather[0].icon}.png' alt="Weather Icon">
         <h2>${weather.city.name}</h2>
-        <h3>${weather.list[9].dt_txt}</h3>
-        <img src='http://openweathermap.org/img/w/${weather.list[9].weather[0].icon}.png' alt="Weather Icon">
-        <h4>Temp Range: ${weather.list[9].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-        <p>Status: ${weather.list[9].weather[0].description}</p>
-        <p>Humidity: ${weather.list[9].main.humidity}%</p>
-        <p>Cloudiness: ${weather.list[9].clouds.all}%</p>
-        <p>Wind Speed: ${weather.list[9].wind.speed}mph</p>
-        <p>Wind Direction: ${weather.list[9].wind.deg}</p>
+        <h3>${weather.list[10].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[10].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Status: ${weather.list[10].weather[0].description}</p>
+        <p>Humidity: ${weather.list[10].main.humidity}%</p>
+        <p>Cloudiness: ${weather.list[10].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[10].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[10].wind.deg}</p>
       `)
       $('#3').html(`
+        <img src='http://openweathermap.org/img/w/${weather.list[18].weather[0].icon}.png' alt="Weather Icon">
         <h2>${weather.city.name}</h2>
-        <h3>${weather.list[17].dt_txt}</h3>
-        <img src='http://openweathermap.org/img/w/${weather.list[17].weather[0].icon}.png' alt="Weather Icon">
-        <h4>Temp Range: ${weather.list[17].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-        <p>Status: ${weather.list[17].weather[0].description}</p>
-        <p>Humidity: ${weather.list[17].main.humidity}%</p>
-        <p>Cloudiness: ${weather.list[17].clouds.all}%</p>
-        <p>Wind Speed: ${weather.list[17].wind.speed}mph</p>
-        <p>Wind Direction: ${weather.list[17].wind.deg}</p>
+        <h3>${weather.list[18].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[18].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Status: ${weather.list[18].weather[0].description}</p>
+        <p>Humidity: ${weather.list[18].main.humidity}%</p>
+        <p>Cloudiness: ${weather.list[18].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[18].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[18].wind.deg}</p>
       `)
       $('#4').html(`
+          <img src='http://openweathermap.org/img/w/${weather.list[26].weather[0].icon}.png' alt="Weather Icon">
         <h2>${weather.city.name}</h2>
-        <h3>${weather.list[25].dt_txt}</h3>
-        <img src='http://openweathermap.org/img/w/${weather.list[25].weather[0].icon}.png' alt="Weather Icon">
-        <h4>Temp Range: ${weather.list[25].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-        <p>Status: ${weather.list[25].weather[0].description}</p>
-        <p>Humidity: ${weather.list[25].main.humidity}%</p>
-        <p>Cloudiness: ${weather.list[25].clouds.all}%</p>
-        <p>Wind Speed: ${weather.list[25].wind.speed}mph</p>
-        <p>Wind Direction: ${weather.list[25].wind.deg}</p>
+        <h3>${weather.list[26].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[26].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Status: ${weather.list[26].weather[0].description}</p>
+        <p>Humidity: ${weather.list[26].main.humidity}%</p>
+        <p>Cloudiness: ${weather.list[26].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[26].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[26].wind.deg}</p>
       `)
       $('#5').html(`
-        <img src='http://openweathermap.org/img/w/${weather.list[2].weather[0].icon}.png' alt="Weather Icon">
+        <img src='http://openweathermap.org/img/w/${weather.list[34].weather[0].icon}.png' alt="Weather Icon">
         <h2>${weather.city.name}</h2>
-        <h3>${weather.list[33].dt_txt}</h3>
-        <h4>Temp Range: ${weather.list[33].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-        <p>Status: ${weather.list[33].weather[0].description}</p>
-        <p>Humidity: ${weather.list[33].main.humidity}%</p>
-        <p>Cloudiness: ${weather.list[33].clouds.all}%</p>
-        <p>Wind Speed: ${weather.list[33].wind.speed}mph</p>
-        <p>Wind Direction: ${weather.list[33].wind.deg}degrees</p>
+        <h3>${weather.list[34].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[34].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Status: ${weather.list[34].weather[0].description}</p>
+        <p>Humidity: ${weather.list[34].main.humidity}%</p>
+        <p>Cloudiness: ${weather.list[34].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[34].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[34].wind.deg}degrees</p>
       `)
   })
 }
@@ -85,9 +86,17 @@ let currentIndex = 0
 let highestIndex = $('.allDays').children().length-1;
 console.log($('.allDays').children().length);
 
-$('.scroll').on('click', () => {
-  console.log('can you hear me major tom?');
+$('#next').on('click', () => {
+  $('.allDays').children().eq(currentIndex).css('display', 'none')
+  if (currentIndex < highestIndex) {
+    currentIndex++
+  }else {
+    currentIndex = 0
+  }
+  $('.allDays').children().eq(currentIndex).css('display', 'block')
 })
+
+
 
 
 //dont touch

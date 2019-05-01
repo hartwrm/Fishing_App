@@ -2,7 +2,8 @@
   border: 1px solid black;
 }
 
-.backdrop {
+.body {
+    background-image: url(''); 
     opacity:.5;
     position: fixed;
     width:100%;
@@ -41,7 +42,7 @@ h3 {
 
 .scroll {
   align-self: center;
-  background: #f2cd99;
+  background: black;
   color: #888;
   padding: 1em;
   border-radius: 50%;
