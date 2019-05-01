@@ -25,23 +25,53 @@ const goFish = () => {
     console.log(weather);
     $('#1').html(`
       <h2>${weather.city.name}</h2>
-      <h3>${weather.list[2].dt_txt}</h3>
-      <h4>Temp Range: ${weather.list[2].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-      <p>Humidity: ${weather.list[2].main.humidity}%</p>
-      <p>${weather.list[2].weather[0].description}</p>
-      <p>Cloudiness: ${weather.list[2].clouds.all}%</p>
-      <p>Wind Speed: ${weather.list[2].wind.speed}mph</p>
-      <p>Wind Direction: ${weather.list[2].wind.deg}</p>
+      <h3>${weather.list[1].dt_txt}</h3>
+      <h4>Temp Range: ${weather.list[1].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+      <p>Humidity: ${weather.list[1].main.humidity}%</p>
+      <p>${weather.list[1].weather[0].description}</p>
+      <p>Cloudiness: ${weather.list[1].clouds.all}%</p>
+      <p>Wind Speed: ${weather.list[1].wind.speed}mph</p>
+      <p>Wind Direction: ${weather.list[1].wind.deg}</p>
       `)
       $('#2').html(`
         <h2>${weather.city.name}</h2>
-        <h3>${weather.list[8].dt_txt}</h3>
-        <h4>Temp Range: ${weather.list[8].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
-        <p>Humidity: ${weather.list[8].main.humidity}%</p>
-        <p>${weather.list[8].weather[0].description}</p>
-        <p>Cloudiness: ${weather.list[8].clouds.all}%</p>
-        <p>Wind Speed: ${weather.list[8].wind.speed}mph</p>
-        <p>Wind Direction: ${weather.list[8].wind.deg}</p>
+        <h3>${weather.list[9].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[9].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Humidity: ${weather.list[9].main.humidity}%</p>
+        <p>${weather.list[9].weather[0].description}</p>
+        <p>Cloudiness: ${weather.list[9].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[9].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[9].wind.deg}</p>
+      `)
+      $('#3').html(`
+        <h2>${weather.city.name}</h2>
+        <h3>${weather.list[17].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[17].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Humidity: ${weather.list[17].main.humidity}%</p>
+        <p>${weather.list[17].weather[0].description}</p>
+        <p>Cloudiness: ${weather.list[17].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[17].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[17].wind.deg}</p>
+      `)
+      $('#4').html(`
+        <h2>${weather.city.name}</h2>
+        <h3>${weather.list[25].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[25].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Humidity: ${weather.list[25].main.humidity}%</p>
+        <p>${weather.list[25].weather[0].description}</p>
+        <p>Cloudiness: ${weather.list[25].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[25].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[25].wind.deg}</p>
+      `)
+      $('#5').html(`
+        <h2>${weather.city.name}</h2>
+        <h3>${weather.list[33].dt_txt}</h3>
+        <h4>Temp Range: ${weather.list[33].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+        <p>Humidity: ${weather.list[33].main.humidity}%</p>
+        <p>${weather.list[33].weather[0].description}</p>
+        <p>Cloudiness: ${weather.list[33].clouds.all}%</p>
+        <p>Wind Speed: ${weather.list[33].wind.speed}mph</p>
+        <p>Wind Direction: ${weather.list[33].wind.deg}</p>
       `)
   })
 }
