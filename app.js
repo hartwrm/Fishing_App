@@ -85,6 +85,7 @@ goFish();
 let currentIndex = 0
 let highestIndex = $('.allDays').children().length-1;
 console.log($('.allDays').children().length);
+
 //scroll next
 $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'none')
@@ -96,7 +97,16 @@ $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'block')
 })
 
-
+//scroll back
+$('#back').on('click', () => {
+  $('.allDays').children().eq(currentIndex).css('display', 'none')
+  if (currentIndex > 0) {
+    currentIndex--
+  } else {
+    currentIndex = highestIndex
+  }
+  $('.allDays').children().eq(currentIndex).css('display', 'block')
+})
 
 
 //dont touch
