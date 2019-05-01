@@ -2,7 +2,7 @@ console.log("ground control to major tom?");
 console.log($);
 
 //zipcode is going to be user input
-let zipCode = '02043'
+let zipCode = $('input').val()
 
 //URL variables for API
 let baseURL = 'https://api.openweathermap.org/data/2.5/forecast?zip='
@@ -79,7 +79,11 @@ const goFish = () => {
 
 $(() => {
 
-goFish();
+$('#submit').on('click', (event) => {
+  event.preventDefault()
+  zipCode = $('input').val()
+  goFish()
+})
 
 //carousel variables
 let currentIndex = 0

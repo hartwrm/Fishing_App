@@ -48,12 +48,11 @@ h3 {
   padding: 1em;
   border-radius: 50%;
   text-align: center;
-  box-shadow: 1px 1px #fa8d8e;
 }
 
 .scroll:hover {
   cursor: crosshair;
-  background: #fa8d8e;
-  box-shadow: 1px 1px #f2cd99;
+  background: white;
+  box-shadow: 1px 1px black;
   color: white;
 }
