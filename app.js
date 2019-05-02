@@ -32,7 +32,7 @@ const goFish = () => {
       <img src='http://openweathermap.org/img/w/${weather.list[2].weather[0].icon}.png' alt="Weather Icon">
       <h2>${weather.city.name}</h2>
       <h3>${weather.list[2].dt_txt}</h3>
-      <h4>Temp Range: ${weather.list[2].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
+      <h4>Temp: ${weather.list[2].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
       <p>Status: ${weather.list[2].weather[0].description}</p>
       <p>Humidity: ${weather.list[2].main.humidity}%</p>
       <p>Cloudiness: ${weather.list[2].clouds.all}%</p>

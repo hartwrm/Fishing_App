@@ -17,6 +17,10 @@ form{
   text-align: center;
 }
 
+.allDays{
+  display: flex;
+}
+
 .day{
   display: none;
   background-color: gray;
@@ -36,8 +40,10 @@ h2 {
   margin: auto;
 }
 h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 2%;
+}
+h4{
+  margin: 2%;
 }
 
 
