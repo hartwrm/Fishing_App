@@ -2,16 +2,9 @@
   border: 1px solid black;
 }
 
-html {
+body {
     background: url('https://images.pexels.com/photos/86648/pexels-photo-86648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
     background-size: cover;
-    opacity:.5;
-    position: fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index: auto;
 }
 
 .container {
@@ -23,6 +16,8 @@ html {
 
 .day{
   display: none;
+  background-color: gray;
+  text: black;
 }
 
 .day:first-of-type{
@@ -34,14 +29,23 @@ img{
 
 h2 {
   text-align: center;
-  margin-top: 0;
+  margin-top: auto;
 }
 h3 {
   margin: inherit;
 }
 
+form{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+  text-align: center;
+}
 
 .scroll {
+  display: none;
   align-self: center;
   background: black;
   color: #888;

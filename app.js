@@ -1,8 +1,17 @@
 console.log("ground control to major tom?");
 console.log($);
 
-//zipcode is going to be user input
-let zipCode = $('input').val()
+// zipcode is going to be user input
+let zipCode = '';
+
+$('#submit').on('click', (event) => {
+  event.preventDefault()
+  zipCode = $('#input').val()
+  console.log(zipCode);
+  $('.scroll').css('display', 'block')
+  goFish()
+  $('form').appendTo('body')
+})
 
 //URL variables for API
 let baseURL = 'https://api.openweathermap.org/data/2.5/forecast?zip='
@@ -11,11 +20,12 @@ let queryURL = baseURL + zipCode + apiKey + '&units=imperial'
 console.log(queryURL);
 
 
+
 //return pertinent weather data for fishing
 //tried to write this in a DRYer function but ended up just beating my head against the wall
 const goFish = () => {
   $.ajax({
-    url: queryURL
+    url: baseURL + zipCode + apiKey + '&units=imperial'
   }).then((weather) => {
     console.log(weather);
     $('#1').html(`
@@ -76,14 +86,7 @@ const goFish = () => {
   })
 }
 
-
 $(() => {
-
-$('#submit').on('click', (event) => {
-  event.preventDefault()
-  zipCode = $('input').val()
-  goFish()
-})
 
 //carousel variables
 let currentIndex = 0
