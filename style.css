@@ -1,9 +1,9 @@
-* {
+/* * {
   border: 1px solid black;
-}
+} */
 
 body {
-    background: url('https://images.pexels.com/photos/86648/pexels-photo-86648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
+    background: url('https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-HD-Bass-Fishing-Wallpaper-PIC-WPC009885.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -12,19 +12,30 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-top: 10%
 }
 form{
   text-align: center;
+  margin-top: 10%;
 }
 
-.allDays{
-  display: flex;
+#input{
+  border: 1px solid black;
+}
+
+#submit{
+  box-shadow: 2px, 2px, black;
+}
+#submit:hover{
+  background-color: black;
+  color: white;
 }
 
 .day{
   display: none;
   background-color: gray;
   text: black;
+  border-radius: 5%;
 }
 
 .day:first-of-type{
@@ -46,21 +57,25 @@ h4{
   margin: 2%;
 }
 
+p{
+  margin: 2%;
+}
 
 
 .scroll {
   display: none;
   align-self: center;
   background: black;
-  color: #888;
+  color: white;
   padding: 1em;
   border-radius: 50%;
   text-align: center;
+  margin: 5px;
 }
 
 .scroll:hover {
   cursor: crosshair;
   background: white;
   box-shadow: 1px 1px black;
-  color: white;
+  color: black;
 }
