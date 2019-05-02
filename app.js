@@ -4,6 +4,7 @@ console.log($);
 // zipcode is going to be user input
 let zipCode = '';
 
+//on submit pull data and display
 $('#submit').on('click', (event) => {
   event.preventDefault()
   zipCode = $('#input').val()
@@ -19,10 +20,12 @@ let apiKey = '&appid=7538ada83bef78836cd80e44d909aa83'
 let queryURL = baseURL + zipCode + apiKey + '&units=imperial'
 console.log(queryURL);
 
+//make day divs to hold API data
 const makeDay = () => {
   for (let i = 1; i <= 5 ; i++) {
   const $dayDiv = $('<div>').addClass('day').attr('id', i).appendTo('.allDays')
-  const $add = $('<button>').text('Add').appendTo($dayDiv)
+  const $add = $('<button>').text('Add')
+  const $remove = $('<button>').text('Remove')
   }
 }
 
