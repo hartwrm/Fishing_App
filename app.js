@@ -11,9 +11,8 @@ $('#submit').on('click', (event) => {
   console.log(zipCode);
   $('.scroll').css('display', 'block')
   goFish()
-//add and remove buttons for moving day data to journal
-  const $remove = $('<button>').text('Remove').prependTo('body')
-  const $add = $('<button>').text('Add').prependTo('body')
+//add button for moving day data to journal
+  // const $add = $('<button>').text('Add').addClass('journal').prependTo('.wrapper')
   $('form').css('margin-top', '5%')
 })
 
@@ -27,6 +26,7 @@ console.log(queryURL);
 const makeDay = () => {
   for (let i = 1; i <= 5 ; i++) {
   const $dayDiv = $('<div>').addClass('day').attr('id', i).appendTo('.allDays')
+  const $journalDiv = $('<div>').addClass('journal').attr('id', i).appendTo('.wrapper')
   }
 }
 

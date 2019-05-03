@@ -1,6 +1,6 @@
-/* * {
+* {
   border: 1px solid black;
-} */
+}
 
 body {
     background: url('https://images.unsplash.com/photo-1530229540764-5f6ab595fdbe?ixlib=rb-1.2.1&w=1000&q=80') no-repeat center center fixed;
@@ -39,6 +39,7 @@ form{
   text: black;
   border-radius: 5%;
   color: white;
+  box-shadow: 10px 0 5px -2px black;
 }
 
 .day:first-of-type{
@@ -72,11 +73,17 @@ p{
   text-align: center;
   margin: 5px;
   font-size: small;
+  box-shadow: 5px 0 3px -1px black;
+
 }
 
 .scroll:hover {
-  cursor: crosshair;
   background: #a6abb5;
   box-shadow: 1px 1px black;
   color: black;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: row;
 }
