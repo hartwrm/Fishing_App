@@ -11,6 +11,9 @@ $('#submit').on('click', (event) => {
   console.log(zipCode);
   $('.scroll').css('display', 'block')
   goFish()
+//add and remove buttons for moving day data to journal
+  const $remove = $('<button>').text('Remove').prependTo('body')
+  const $add = $('<button>').text('Add').prependTo('body')
   $('form').css('margin-top', '5%')
 })
 
@@ -24,8 +27,6 @@ console.log(queryURL);
 const makeDay = () => {
   for (let i = 1; i <= 5 ; i++) {
   const $dayDiv = $('<div>').addClass('day').attr('id', i).appendTo('.allDays')
-  const $add = $('<button>').text('Add')
-  const $remove = $('<button>').text('Remove')
   }
 }
 
@@ -103,6 +104,17 @@ let currentIndex = 0
 let highestIndex = $('.allDays').children().length-1;
 console.log($('.allDays').children().length);
 
+//scroll back
+$('#back').on('click', () => {
+  $('.allDays').children().eq(currentIndex).css('display', 'none')
+  if (currentIndex > 0) {
+    currentIndex--
+  } else {
+    currentIndex = highestIndex
+  }
+  $('.allDays').children().eq(currentIndex).css('display', 'block')
+})
+
 //scroll next
 $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'none')
@@ -114,16 +126,7 @@ $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'block')
 })
 
-//scroll back
-$('#back').on('click', () => {
-  $('.allDays').children().eq(currentIndex).css('display', 'none')
-  if (currentIndex > 0) {
-    currentIndex--
-  } else {
-    currentIndex = highestIndex
-  }
-  $('.allDays').children().eq(currentIndex).css('display', 'block')
-})
+
 
 
 

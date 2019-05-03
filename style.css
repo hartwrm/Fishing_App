@@ -11,9 +11,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  margin-top: 10%
+  flex-direction:row;
+  margin-top: 10%;
 }
+
 form{
   text-align: center;
   margin-top: 10%;
@@ -44,9 +45,6 @@ form{
   display: block;
 }
 
-img{
-
-}
 
 h2 {
   text-align: center;
@@ -68,16 +66,17 @@ p{
   display: none;
   align-self: center;
   background: black;
-  color: white;
+  color: #a6abb5;
   padding: 1em;
   border-radius: 50%;
   text-align: center;
   margin: 5px;
+  font-size: small;
 }
 
 .scroll:hover {
   cursor: crosshair;
-  background: white;
+  background: #a6abb5;
   box-shadow: 1px 1px black;
   color: black;
 }
