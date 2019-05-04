@@ -91,9 +91,12 @@ const goFish = () => {
         <p>Wind Speed: ${weather.list[34].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[34].wind.deg}˚</p>
       `)
-      localStorage.setItem('trip', JSON.stringify(weather));
+      $('#add').on('click', () => {
+        localStorage.setItem('city', JSON.stringify(weather.city.name))
+      })
   })
 }
+
 
 
 //
@@ -131,9 +134,9 @@ $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'block')
 })
 
-$('#add').on('click', () => {
-  console.log('hello');
-})
+// $('#add').on('click', () => {
+//   console.log('hello');
+// })
 
 
 

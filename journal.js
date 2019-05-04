@@ -1,7 +1,12 @@
 console.log('hello world');
 
+let city = JSON.parse(localStorage.getItem('city'))
+
 
 $(() => {
-let weather = JSON.parse(localStorage.getItem('trip'))
-console.log(weather);
+
+$('.journalcontainer').prepend(city)
+
+
+
 })
