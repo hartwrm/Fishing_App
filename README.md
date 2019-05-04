@@ -11,3 +11,7 @@ Weather: https://openweathermap.org/api
 4. API results for each day will appear in separate boxes detailing weather details for those days...User will carousel through days.
 5. Each day will have option to add/remove day from their itinerary
 6. User will be able to click on a stored day and record their results from that day.
+
+
+Problems:
+Using local storage to store each day data to create a journal.  Still have not resolved this issue.
