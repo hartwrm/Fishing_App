@@ -2,5 +2,6 @@ console.log('hello world');
 
 
 $(() => {
-window.localStorage.getItem('trip')
+let weather = JSON.parse(localStorage.getItem('trip'))
+console.log(weather);
 })

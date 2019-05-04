@@ -91,14 +91,11 @@ const goFish = () => {
         <p>Wind Speed: ${weather.list[34].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[34].wind.deg}˚</p>
       `)
+      localStorage.setItem('trip', JSON.stringify(weather));
   })
 }
 
-const saveLocal = () => {
-  // console.log(localStorage.setItem('day', 'hello'));
-  localStorage.setItem('trip', JSON.stringify
-  // kind of like: localStorage.test = 'hello'
-}
+
 //
 // const getLocal = () => {
 //   console.log(localStorage.getItem('test'))
@@ -136,7 +133,6 @@ $('#next').on('click', () => {
 
 $('#add').on('click', () => {
   console.log('hello');
-  saveLocal();
 })
 
 
