@@ -62,8 +62,9 @@ button[name="add"] {
   font-size:  14px;
 }
 
-button[name='add']:hover{
-  color: black;
+.add:hover{
+  background-color: black;
+  color: #a6abb5;
 }
 
 .scroll {
@@ -98,6 +99,7 @@ a{
   background-color: black;
   font-size: 20px;
   border-radius: 10%;
+  opacity: .8;
 }
 
 @media only screen and (max-width: 600px) {

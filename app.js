@@ -73,7 +73,7 @@ const goFish = () => {
         <button class='add' type="button" name="add">Add</button>
       `)
       $('#4').html(`
-          <img src='http://openweathermap.org/img/w/${weather.list[26].weather[0].icon}.png' alt="Weather Icon">
+        <img src='http://openweathermap.org/img/w/${weather.list[26].weather[0].icon}.png' alt="Weather Icon">
         <h2>${weather.city.name}</h2>
         <h3>${weather.list[26].dt_txt}</h3>
         <h4>Temp: ${weather.list[26].main.temp_min}-${weather.list[2].main.temp_max}°F</h4>
@@ -99,6 +99,16 @@ const goFish = () => {
   })
 }
 
+const saveLocal = () => {
+  localStorage.setItem('.day', '')
+  // kind of like: localStorage.test = 'hello'
+  // console.log('hello');
+}
+
+const getLocal = () => {
+  console.log(localStorage.getItem('test'))
+  console.log('goodbye');
+}
 
 $(() => {
 
@@ -131,8 +141,12 @@ $('#next').on('click', () => {
 })
 
 $('.add').on('click', () => {
-  
+  saveLocal();
 })
+
+
+
+
 
 
 

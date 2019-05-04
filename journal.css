@@ -1,3 +1,15 @@
 * {
   border: 1px solid black;
 }
+
+.journalcontainer{
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input, button{
+  width: 20%;
+}
