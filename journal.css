@@ -2,6 +2,11 @@
   border: 1px solid black;
 }
 
+body {
+    background: url('https://images.unsplash.com/photo-1530229540764-5f6ab595fdbe?ixlib=rb-1.2.1&w=1000&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .journalcontainer{
 }
 
@@ -10,6 +15,11 @@ form{
   flex-direction: column;
 }
 
-input, button{
+input{
   width: 20%;
+}
+
+button{
+  width: 15%;
+  align-self: center;
 }

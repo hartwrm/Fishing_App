@@ -46,7 +46,6 @@ const goFish = () => {
       <p>Cloudiness: ${weather.list[2].clouds.all}%</p>
       <p>Wind Speed: ${weather.list[2].wind.speed}mph</p>
       <p>Wind Direction: ${weather.list[2].wind.deg}˚</p>
-      <button class='add' type="button" name="add">Add</button>
       `)
       $('#2').html(`
         <img src='http://openweathermap.org/img/w/${weather.list[10].weather[0].icon}.png' alt="Weather Icon">
@@ -58,7 +57,6 @@ const goFish = () => {
         <p>Cloudiness: ${weather.list[10].clouds.all}%</p>
         <p>Wind Speed: ${weather.list[10].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[10].wind.deg}˚</p>
-        <button class='add' type="button" name="add">Add</button>
       `)
       $('#3').html(`
         <img src='http://openweathermap.org/img/w/${weather.list[18].weather[0].icon}.png' alt="Weather Icon">
@@ -70,7 +68,6 @@ const goFish = () => {
         <p>Cloudiness: ${weather.list[18].clouds.all}%</p>
         <p>Wind Speed: ${weather.list[18].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[18].wind.deg}˚</p>
-        <button class='add' type="button" name="add">Add</button>
       `)
       $('#4').html(`
         <img src='http://openweathermap.org/img/w/${weather.list[26].weather[0].icon}.png' alt="Weather Icon">
@@ -82,7 +79,6 @@ const goFish = () => {
         <p>Cloudiness: ${weather.list[26].clouds.all}%</p>
         <p>Wind Speed: ${weather.list[26].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[26].wind.deg}˚</p>
-        <button class='add' type="button" name="add">Add</button>
       `)
       $('#5').html(`
         <img src='http://openweathermap.org/img/w/${weather.list[34].weather[0].icon}.png' alt="Weather Icon">
@@ -94,20 +90,17 @@ const goFish = () => {
         <p>Cloudiness: ${weather.list[34].clouds.all}%</p>
         <p>Wind Speed: ${weather.list[34].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[34].wind.deg}˚</p>
-        <button class='add' type="button" name="add">Add</button>
       `)
   })
 }
 
 const saveLocal = () => {
-  localStorage.setItem('.day', '')
+  console.log(localStorage.setItem('day', 'hello'));
   // kind of like: localStorage.test = 'hello'
-  // console.log('hello');
 }
 
 const getLocal = () => {
   console.log(localStorage.getItem('test'))
-  console.log('goodbye');
 }
 
 $(() => {
@@ -140,8 +133,8 @@ $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'block')
 })
 
-$('.add').on('click', () => {
-  saveLocal();
+$('').on('click', () => {
+  console.log('hello');
 })
 
 
