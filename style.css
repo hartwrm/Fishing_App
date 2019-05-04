@@ -52,22 +52,18 @@ h2 {
   text-align: center;
   margin: auto;
 }
-h3 {
-  margin: 2%;
-}
-h4{
+h3, h4, p {
   margin: 2%;
 }
 
-p{
-  margin: 2%;
-}
 
 button[name="add"] {
   margin-left: 40%;
   font-size:  14px;
+}
 
-
+button[name='add']:hover{
+  color: black;
 }
 
 .scroll {
@@ -90,7 +86,25 @@ button[name="add"] {
   color: black;
 }
 
-/* .wrapper {
+.wrapper {
+  margin-top: 10%;
   display: flex;
-  justify-content: row;
-} */
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  border-radius: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+
+body{
+  width: auto;
+  height: auto;
+}
+
+}
