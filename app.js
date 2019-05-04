@@ -95,13 +95,14 @@ const goFish = () => {
 }
 
 const saveLocal = () => {
-  console.log(localStorage.setItem('day', 'hello'));
+  // console.log(localStorage.setItem('day', 'hello'));
+  localStorage.setItem('trip', JSON.stringify
   // kind of like: localStorage.test = 'hello'
 }
-
-const getLocal = () => {
-  console.log(localStorage.getItem('test'))
-}
+//
+// const getLocal = () => {
+//   console.log(localStorage.getItem('test'))
+// }
 
 $(() => {
 
@@ -133,10 +134,10 @@ $('#next').on('click', () => {
   $('.allDays').children().eq(currentIndex).css('display', 'block')
 })
 
-$('').on('click', () => {
+$('#add').on('click', () => {
   console.log('hello');
+  saveLocal();
 })
-
 
 
 

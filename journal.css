@@ -8,18 +8,20 @@ body {
 }
 
 .journalcontainer{
+  display: flex;
+  flex-flow: row wrap;
 }
 
 form{
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 input{
   width: 20%;
 }
 
-button{
+#id{
   width: 15%;
   align-self: center;
 }
