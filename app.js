@@ -22,12 +22,16 @@ let apiKey = '&appid=7538ada83bef78836cd80e44d909aa83'
 let queryURL = baseURL + zipCode + apiKey + '&units=imperial'
 console.log(queryURL);
 
+const dayData = [];
 //make day divs to hold API data
 const makeDay = () => {
   for (let i = 1; i <= 5 ; i++) {
   const $dayDiv = $('<div>').addClass('day').attr('id', i).appendTo('.allDays')
+  dayData.push($dayDiv)
   }
 }
+console.log(dayData);
+
 
 //return pertinent weather data for fishing
 //tried to write this in a DRYer function but ended up just beating my head against the wall
@@ -91,18 +95,8 @@ const goFish = () => {
         <p>Wind Speed: ${weather.list[34].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[34].wind.deg}˚</p>
       `)
-      $('#add').on('click', () => {
-        localStorage.setItem('city', JSON.stringify(weather.city.name))
-      })
   })
 }
-
-
-
-//
-// const getLocal = () => {
-//   console.log(localStorage.getItem('test'))
-// }
 
 $(() => {
 
@@ -114,30 +108,33 @@ console.log($('.allDays').children().length);
 
 //scroll back
 $('#back').on('click', () => {
-  $('.allDays').children().eq(currentIndex).css('display', 'none')
+  $('.allDays').children().eq(currentIndex).hide('slow')
   if (currentIndex > 0) {
     currentIndex--
   } else {
     currentIndex = highestIndex
   }
-  $('.allDays').children().eq(currentIndex).css('display', 'block')
+  $('.allDays').children().eq(currentIndex).show('slow')
 })
 
 //scroll next
 $('#next').on('click', () => {
-  $('.allDays').children().eq(currentIndex).css('display', 'none')
+  $('.allDays').children().eq(currentIndex).hide('slow')
   if (currentIndex < highestIndex) {
     currentIndex++
   }else {
     currentIndex = 0
   }
-  $('.allDays').children().eq(currentIndex).css('display', 'block')
+  $('.allDays').children().eq(currentIndex).show('slow')
 })
 
-// $('#add').on('click', () => {
-//   console.log('hello');
-// })
+$('.allDays').on('click', () => {
+  $('.allDays').selectable();
+})
 
+$( ".allDays" ).bind( "mousedown", function ( e ) {
+    e.metaKey = true;
+} ).selectable();
 
 
 

@@ -7,6 +7,8 @@ $(() => {
 
 $('.journalcontainer').prepend(city)
 
-
+$('form').on('#save', () => {
+  localStorage.setItem('tripinfo', JSON.stringify('form'))
+})
 
 })
