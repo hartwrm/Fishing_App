@@ -132,13 +132,15 @@ $('.allDays').on('click', () => {
   $('.allDays').selectable();
 })
 
-$( ".allDays" ).bind( "mousedown", function ( e ) {
+$( '.allDays' ).bind( "mousedown", function ( e ) {
     e.metaKey = true;
 } ).selectable();
 
+let tripInfo = $('.ui-selected')
 
-
-
+$('#add').on('click', () => {
+  localStorage.setItem('trip', tripInfo);
+})
 
 
 //dont touch

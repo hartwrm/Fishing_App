@@ -1,14 +1,11 @@
 console.log('hello world');
 
-let city = JSON.parse(localStorage.getItem('city'))
+let trip = localStorage.getItem('trip')
 
+console.log(localStorage.getItem('trip'));
 
 $(() => {
 
-$('.journalcontainer').prepend(city)
-
-$('form').on('#save', () => {
-  localStorage.setItem('tripinfo', JSON.stringify('form'))
-})
+  $('.journalcontainer').prepend(trip);
 
 })
