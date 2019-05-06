@@ -1,11 +1,12 @@
 console.log('hello world');
 
-let trip = JSON.parse(localStorage.getItem('trip'))
+let city = JSON.parse(localStorage.getItem('city'))
+let date = JSON.parse(localStorage.getItem('date'))
 
-console.log(JSON.parse(localStorage.getItem('trip')));
+console.log(JSON.parse(localStorage.getItem('date')));
 
 $(() => {
-
-  $('.journalcontainer').prepend(trip);
+  $('.journalcontainer').prepend(date)
+  $('.journalcontainer').prepend(city);
 
 })

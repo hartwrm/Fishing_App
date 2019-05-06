@@ -96,10 +96,21 @@ const goFish = () => {
         <p>Wind Direction: ${weather.list[34].wind.deg}˚</p>
       `)
 
-      let tripInfo = $('ui-selected').children().text()
+      let city = weather.city.name;
+      if (document.querySelector('.ui-selected')) {
+          let date = weather.list[i].dt_txt;
+          let temp = weather.list[i].main.temp_max;
+          let status = weather.list[i].weather[0].description
+          let humidity = weather.list[i].main.humidity
+          let clouds = weather.list[i].clouds.all
+          let windSpd = weather.list[i].wind.speed
+          let windDir = weather.list[i].wind.deg
+
+      }
 
       $('#add').on('click', () => {
-        localStorage.setItem('trip', JSON.stringify(dayData));
+        localStorage.setItem('city', JSON.stringify(city));
+        localStorage.setItem('date', JSON.stringify(date))
       })
 
   })
