@@ -1,8 +1,8 @@
 console.log('hello world');
 
-let trip = localStorage.getItem('trip')
+let trip = JSON.parse(localStorage.getItem('trip'))
 
-console.log(localStorage.getItem('trip'));
+console.log(JSON.parse(localStorage.getItem('trip')));
 
 $(() => {
 

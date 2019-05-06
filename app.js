@@ -95,6 +95,13 @@ const goFish = () => {
         <p>Wind Speed: ${weather.list[34].wind.speed}mph</p>
         <p>Wind Direction: ${weather.list[34].wind.deg}˚</p>
       `)
+
+      let tripInfo = $('ui-selected').children().text()
+
+      $('#add').on('click', () => {
+        localStorage.setItem('trip', JSON.stringify(dayData));
+      })
+
   })
 }
 
@@ -135,12 +142,6 @@ $('.allDays').on('click', () => {
 $( '.allDays' ).bind( "mousedown", function ( e ) {
     e.metaKey = true;
 } ).selectable();
-
-let tripInfo = $('.ui-selected')
-
-$('#add').on('click', () => {
-  localStorage.setItem('trip', tripInfo);
-})
 
 
 //dont touch
